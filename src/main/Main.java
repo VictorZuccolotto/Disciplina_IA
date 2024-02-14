@@ -1,18 +1,14 @@
 package main;
 
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 import Busca.BuscaProfundidade;
-import Grafo.Aresta;
 import Grafo.Grafo;
 import Grafo.No;
 
 public class Main {
 	
-	public static String noFinal = "Rimnicu Vilcea";
 	
 	
 	public static void main(String[] args) {
@@ -22,7 +18,7 @@ public class Main {
 		
         Scanner scanner = new Scanner(System.in);
         No noInicial = null;
-        String noDestino;
+        String noDestino = null;
         try {
 			
 	        int numero = scanner.nextInt();
@@ -36,7 +32,8 @@ public class Main {
         	scanner.close();
 		}
         
-		BuscaProfundidade busca = new BuscaProfundidade(noInicial, "Dobreta");
+        
+		BuscaProfundidade busca = new BuscaProfundidade(noInicial, noDestino);
 		busca.percorre(null, grafo.getNos().get(0));
 		Collections.reverse(busca.caminho);
 		System.out.println(busca.caminho);

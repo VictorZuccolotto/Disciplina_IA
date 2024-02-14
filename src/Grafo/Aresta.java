@@ -6,17 +6,19 @@ public class Aresta {
 	
 	
 	int valor;
-	List<No> nos;
+//	List<No> nos;
 	
-//	private Vertice v1;
-//	private Vertice v2;
+	private No v1;
+	private No v2;
 
 	
 	
 	public Aresta(int valor, List<No> nos) {
 		super();
 		this.valor = valor;
-		this.nos = nos;
+		this.v1 = nos.get(0);
+		this.v2 = nos.get(1);
+//		this.nos = nos;
 	}
 
 
@@ -30,18 +32,41 @@ public class Aresta {
 	}
 
 
-	public List<No> getNos() {
-		return nos;
-	}
-
-
-	public void setNos(List<No> nos) {
-		this.nos = nos;
-	}
+//	public List<No> getNos() {
+//		return nos;
+//	}
+//
+//
+//	public void setNos(List<No> nos) {
+//		this.nos = nos;
+//	}
+	
+	
+	
 	
 	@Override
 	public String toString() {
-		return "Aresta "+ this.nos.toString();
+		return "Aresta "+ this.v1.toString() + " " + this.v2.toString();
+	}
+
+
+	public No getV1() {
+		return v1;
+	}
+
+
+	public void setV1(No v1) {
+		this.v1 = v1;
+	}
+
+
+	public No getV2() {
+		return v2;
+	}
+
+
+	public void setV2(No v2) {
+		this.v2 = v2;
 	}
 	
 
