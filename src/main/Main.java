@@ -39,6 +39,13 @@ public class Main {
 		}
         
         
+<<<<<<< HEAD
+=======
+		BuscaProfundidade busca = new BuscaProfundidade(noInicial, noDestino);
+		busca.percorre(null, grafo.getNos().get(0));
+		Collections.reverse(busca.caminho);
+		System.out.println(busca.caminho);
+>>>>>>> b3b51a17c046da51c34bf8eb87428e9aed173e59
 	} 
 	
 	
