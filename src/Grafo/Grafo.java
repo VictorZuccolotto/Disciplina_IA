@@ -10,92 +10,83 @@ public class Grafo {
 	
 	public List<No> criarGrafo() {
 		No arad = new No("Arad");
-		No timisoara = new No("Timisoara");
-		No zerind = new No("Zerind");
-		No oradea = new No("Oradea");
-		No sibiu = new No("Sibiu");
+		No bucharest = new No("Bucharest");
+		No craiova = new No("Craiova");
+		No dobreta = new No("Dobreta");
+		No eforie = new No("Eforie");
+		No fagaras = new No("Fagaras");
+		No giurgiu = new No("Giurgiu");
+		No hirsova = new No("Hirsova");
+		No iasi = new No("Iasi");
 		No lugoj = new No("lugoj");
 		No mehadia = new No("Mehadia");
-		No dobreta = new No("Dobreta");
-		No craiova = new No("Craiova");
-		No rimnicu_vilcea = new No("Rimnicu Vilcea");
-		No fagaras = new No("Fagaras");
-		No pitesti = new No("Pitesti");
-		No bucharest = new No("Bucharest");
-		No giurgiu = new No("Giurgiu");
-		No urziceni = new No("Urziceni");
-		No hirsova = new No("Hirsova");
-		No eforie = new No("Eforie");
-		No vaslui = new No("Vaslui");
-		No iasi = new No("Iasi");
 		No neamt = new No("Neamt");
+		No oradea = new No("Oradea");
+		No pitesti = new No("Pitesti");
+		No rimnicu_vilcea = new No("Rimnicu Vilcea");
+		No sibiu = new No("Sibiu");
+		No timisoara = new No("Timisoara");
+		No urziceni = new No("Urziceni");
+		No vaslui = new No("Vaslui");
+		No zerind = new No("Zerind");
 		
-		Aresta at = new Aresta(118, arad, timisoara);
-		Aresta as = new Aresta(140, arad,sibiu);
-		Aresta az = new Aresta(75, arad,zerind);
-		
-		Aresta zo = new Aresta(71, zerind,oradea);
-		
-		Aresta tl = new Aresta(111, timisoara,lugoj);
-		
-		Aresta os = new Aresta(151, oradea,sibiu);
-		
-		Aresta sr = new Aresta(80, sibiu,rimnicu_vilcea);
-		Aresta sf = new Aresta(99, sibiu,fagaras);
 
-		Aresta lm = new Aresta(70, lugoj,mehadia);
+		Aresta ab = new Aresta(1, arad, bucharest);
+		Aresta ac = new Aresta(1, arad, craiova);
+
+		Aresta bd = new Aresta(2, bucharest, dobreta);
+		Aresta be = new Aresta(2, bucharest, eforie);
 		
-		Aresta md = new Aresta(75, mehadia,dobreta);
+		Aresta cf = new Aresta(2, craiova, fagaras);
+		Aresta cg = new Aresta(2, craiova, giurgiu);
+
+		Aresta dh = new Aresta(3, dobreta, hirsova);
+		Aresta di = new Aresta(3, dobreta, iasi);
+
+		Aresta el = new Aresta(3, eforie, lugoj);
+		Aresta em = new Aresta(3, eforie, mehadia);
 		
-		Aresta dc = new Aresta(120, dobreta,craiova);
+		Aresta fn = new Aresta(3, fagaras, neamt);
+		Aresta fo = new Aresta(3, fagaras, oradea);
+
+		Aresta gp = new Aresta(3, giurgiu, pitesti);
+		Aresta gr = new Aresta(3, giurgiu, rimnicu_vilcea);
+
+		Aresta hs = new Aresta(4, hirsova, sibiu);
+		Aresta ht = new Aresta(4, hirsova, timisoara);
+
+		Aresta iu = new Aresta(4, iasi, urziceni);
+		Aresta iv = new Aresta(4, iasi, vaslui);
+
+		Aresta lz = new Aresta(4, lugoj, zerind);
+	
 		
-		Aresta cp = new Aresta(138, craiova,pitesti);
-		Aresta cr = new Aresta(146, craiova,rimnicu_vilcea);
+		arad.setArestas(Arrays.asList(ab, ac));
+		bucharest.setArestas(Arrays.asList(ab, bd, be));
+		craiova.setArestas(Arrays.asList(ac, cf, cg));
+		dobreta.setArestas(Arrays.asList(bd, dh, di));
+
+		eforie.setArestas(Arrays.asList(be, el, em));
+		fagaras.setArestas(Arrays.asList(cf, fn, fo));
+		giurgiu.setArestas(Arrays.asList(cg, gp, gr));
+		hirsova.setArestas(Arrays.asList(dh, hs, ht));
+
+		iasi.setArestas(Arrays.asList(di, iu, iv));
+		lugoj.setArestas(Arrays.asList(el, lz));
+		mehadia.setArestas(Arrays.asList(em));
+		neamt.setArestas(Arrays.asList(fn));
+
+		oradea.setArestas(Arrays.asList(fo));
+		pitesti.setArestas(Arrays.asList(gp));
+		rimnicu_vilcea.setArestas(Arrays.asList(gr));
+		sibiu.setArestas(Arrays.asList(hs));
+
+		timisoara.setArestas(Arrays.asList(ht));
+		urziceni.setArestas(Arrays.asList(iu));
+		vaslui.setArestas(Arrays.asList(iv));
+		zerind.setArestas(Arrays.asList(lz));
 		
-		
-		Aresta rp = new Aresta(97, rimnicu_vilcea,pitesti);
-		
-		Aresta fb = new Aresta(211, fagaras,bucharest);
-		
-		Aresta pb = new Aresta(101, pitesti,bucharest);
-		
-		Aresta bg = new Aresta(90, bucharest,giurgiu);
-		Aresta bu = new Aresta(85, bucharest,urziceni);
-		
-		
-		Aresta uh = new Aresta(98, urziceni,hirsova);
-		Aresta uv = new Aresta(142, urziceni,vaslui);
-		
-		Aresta he = new Aresta(86, hirsova,eforie);
-		
-		
-		Aresta vi = new Aresta(92, vaslui,iasi);
-		
-		Aresta in = new Aresta(87, iasi,neamt);
-		
-		
-		arad.setArestas(Arrays.asList(at,as,az));
-		zerind.setArestas(Arrays.asList(zo,az));
-		timisoara.setArestas(Arrays.asList(tl,at));
-		oradea.setArestas(Arrays.asList(os,zo));
-		sibiu.setArestas(Arrays.asList(sr,sf,as,os));
-		lugoj.setArestas(Arrays.asList(lm,tl));
-		mehadia.setArestas(Arrays.asList(md,lm));
-		dobreta.setArestas(Arrays.asList(dc,md));
-		craiova.setArestas(Arrays.asList(cp,cr,dc));
-		rimnicu_vilcea.setArestas(Arrays.asList(rp,cp,sr));
-		fagaras.setArestas(Arrays.asList(fb,sf));
-		pitesti.setArestas(Arrays.asList(pb,rp,cp));
-		bucharest.setArestas(Arrays.asList(bg,bu,pb,fb));
-		giurgiu.setArestas(Arrays.asList(bg));
-		urziceni.setArestas(Arrays.asList(uh,uv,bu));
-		hirsova.setArestas(Arrays.asList(he,uh));
-		eforie.setArestas(Arrays.asList(he));
-		vaslui.setArestas(Arrays.asList(vi,uv));
-		iasi.setArestas(Arrays.asList(in,vi));
-		neamt.setArestas(Arrays.asList(in));
-		
-		return Arrays.asList(arad, timisoara, zerind, oradea, sibiu, lugoj, mehadia, dobreta, craiova, rimnicu_vilcea, fagaras, pitesti, bucharest, giurgiu, urziceni, hirsova, eforie, vaslui, iasi, neamt);
+		return Arrays.asList(arad, timisoara, zerind, sibiu, lugoj, mehadia, dobreta, craiova, rimnicu_vilcea, fagaras, pitesti, bucharest, giurgiu, urziceni, hirsova, eforie, vaslui, iasi, neamt);
 		
 	}
 	
