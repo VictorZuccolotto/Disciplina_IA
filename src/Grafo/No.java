@@ -9,7 +9,6 @@ public class No {
 	
 	
 	public No(String nome, List<Aresta> arestas) {
-		super();
 		this.nome = nome;
 		this.arestas = arestas;
 	}
